@@ -24,19 +24,10 @@ class Report
         return  $this->date;
     }
 
-    public function getContents()
-    {
-        return [
-            'title' => $this->getTitle(),
-            'date' => $this->getDate(),
-        ];
-    }
-
     public function formatWord()
     {
         $title = $this->getTitle();
         $date = $this->getDate();
-        $rawContent = $this->getContents();
         return <<<EOD
            Word Format
            $title
@@ -48,7 +39,6 @@ class Report
     {
         $title = $this->getTitle();
         $date = $this->getDate();
-        $rawContent = $this->getContents();
         return <<<EOD
            PDF Format
            $title

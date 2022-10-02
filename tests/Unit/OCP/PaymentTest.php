@@ -18,11 +18,6 @@ class PaymentTest extends TestCase
         $this->assertStringContainsString(\App\Solid\OCP_Violation\MomoPayment::PAYMENT_NAME, $paymentResult);
     }
 
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
     public function test_refactored()
     {
         $payment = new \App\Solid\OCP_Refactored\Payment();
