@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\LSP_Violation;
+namespace App\Solid\SRP_Violation;
 
 
 class Report

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\LSP_Refactored;
+namespace App\Solid\SRP_Refactored;
 
 class WordFormatter implements ReportFormattable
 {
