@@ -13,15 +13,15 @@ class PaymentTest extends TestCase
      */
     public function test_violation()
     {
-        $payment = new \App\Solid\OCP_Violation\Payment();
-        $paymentResult = $payment->process(new \App\Solid\OCP_Violation\MomoPayment());
-        $this->assertStringContainsString(\App\Solid\OCP_Violation\MomoPayment::PAYMENT_NAME, $paymentResult);
+        $payment = new \App\Solid\OCP\Bad\Payment();
+        $paymentResult = $payment->process(new \App\Solid\OCP\Bad\MomoPayment());
+        $this->assertStringContainsString(\App\Solid\OCP\Bad\MomoPayment::PAYMENT_NAME, $paymentResult);
     }
 
     public function test_refactored()
     {
-        $payment = new \App\Solid\OCP_Refactored\Payment();
-        $paymentResult = $payment->process(new \App\Solid\OCP_Refactored\MomoPayment());
-        $this->assertStringContainsString(\App\Solid\OCP_Refactored\MomoPayment::PAYMENT_NAME, $paymentResult);
+        $payment = new \App\Solid\OCP\Good\Payment();
+        $paymentResult = $payment->process(new \App\Solid\OCP\Good\MomoPayment());
+        $this->assertStringContainsString(\App\Solid\OCP\Good\MomoPayment::PAYMENT_NAME, $paymentResult);
     }
 }

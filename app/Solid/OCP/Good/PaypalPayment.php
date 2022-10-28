@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\OCP_Refactored;
+namespace App\Solid\OCP\Good;
 
 class PaypalPayment implements IPayment
 {

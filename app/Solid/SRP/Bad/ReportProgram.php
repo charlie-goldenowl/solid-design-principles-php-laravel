@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\SRP_Violation;
+namespace App\Solid\SRP\Bad;
 
 
 class ReportProgram

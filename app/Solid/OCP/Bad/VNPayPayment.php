@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\OCP_Violation;
+namespace App\Solid\OCP\Bad;
 
 class VNPayPayment
 {

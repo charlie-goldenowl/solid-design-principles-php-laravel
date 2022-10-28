@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\SRP_Refactored;
+namespace App\Solid\SRP\Good;
 
 
 class ReportProgram
