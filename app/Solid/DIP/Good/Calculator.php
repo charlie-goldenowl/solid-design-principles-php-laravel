@@ -13,3 +13,7 @@ class Calculator
         return $this->cal->calculate($x, $y);
     }
 }
+
+// client code
+// $cal = new Calculator(new Multiply());
+// $result = $cal->caculate();

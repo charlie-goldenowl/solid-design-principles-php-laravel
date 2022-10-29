@@ -7,8 +7,8 @@ class Payment
     public function __construct(public IPayment $payment)
     {
     }
-    public function pay(): string|\Exception
+    public function pay()
     {
-        return $this->payment->pay();
+        echo $this->payment->pay();
     }
 }

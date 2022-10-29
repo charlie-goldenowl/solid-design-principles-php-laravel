@@ -6,8 +6,8 @@ class MomoPayment implements IPayment
 {
     const PAYMENT_NAME = "MOMO";
 
-    public function pay(): string
+    public function pay()
     {
-        return sprintf("paid by %s discount %d", self::PAYMENT_NAME, 10);
+        echo sprintf("paid by %s discount %d", self::PAYMENT_NAME, 10);
     }
 }

@@ -4,18 +4,16 @@ namespace App\Solid\OCP\Bad;
 
 class Payment
 {
-    public function process($payment): string | \Exception
+    public function payNow($paymentName)
     {
-        $result = "";
-        if($payment instanceof MomoPayment){
-            $result = $payment->pay();
-        }elseif($payment instanceof VNPayPayment){
-            $result = $payment->pay();
-        }elseif($payment instanceof PaypalPayment){
-            $result = $payment->pay();
+        if($paymentName == MomoPayment::PAYMENT_NAME){
+            (new MomoPayment())->pay();
+        }elseif($paymentName == VNPayPayment::PAYMENT_NAME){
+            (new VNPayPayment())->pay();
+        }elseif($paymentName == PaypalPayment::PAYMENT_NAME){
+            (new PaypalPayment())->pay();
         }else{
             throw new \Exception("Invalid payment method");
         }
-        return $result;
     }
 }
