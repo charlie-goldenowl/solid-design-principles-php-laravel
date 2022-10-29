@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Solid\DIP\Good\ICalculationOperator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
