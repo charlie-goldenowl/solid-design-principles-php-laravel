@@ -2,7 +2,6 @@
 
 namespace App\Solid\SRP\Good;
 
-
 class Report
 {
     private string $name;
@@ -14,21 +13,21 @@ class Report
         $this->date = $date;
     }
 
-    public function getTitle()
+    public function getTitle(): string
     {
-        return  $this->name;
+        return $this->name;
     }
 
-    public function getDate()
+    public function getDate(): \DateTime
     {
-        return  $this->date;
+        return $this->date;
     }
 
-    public function getContents()
+    public function getContents(): array
     {
         return [
             'title' => $this->getTitle(),
-            'date' => $this->getDate(),
+            'date' => $this->getDate()->format('Y-m-d'),
         ];
     }
 }

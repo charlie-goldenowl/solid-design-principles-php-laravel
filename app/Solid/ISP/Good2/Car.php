@@ -2,25 +2,40 @@
 
 namespace App\Solid\ISP\Good2;
 
-class Car implements ITurnable, IForwardDrivable, IBackwardDrivable
+/**
+ * Class representing a car which can drive forward, backward, and turn.
+ */
+class Car implements IForwardDrivable, IBackwardDrivable, ITurnable
 {
+    /**
+     * Move the car forward.
+     */
     function GoForward(): void
     {
-       echo "Car going forward. \r\n";
+        echo "Car going forward. \r\n";
     }
 
+    /**
+     * Move the car backward.
+     */
     function GoBackward(): void
     {
         echo "Car going backward. \r\n";
     }
 
+    /**
+     * Turn the car to the left.
+     */
     function TurnLeft(): void
     {
-        echo "Car going turns left. \r\n";
+        echo "Car turns left. \r\n";
     }
 
+    /**
+     * Turn the car to the right.
+     */
     function TurnRight(): void
     {
-        echo "Car going turns right.. \r\n";
+        echo "Car turns right. \r\n";
     }
 }

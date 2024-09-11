@@ -2,14 +2,21 @@
 
 namespace App\Solid\LSP\Good;
 
+/**
+ * Base class for menu items.
+ */
 class MenuItem
 {
+    protected int $price;
+    protected string $name;
+    protected string $description;
 
-    public int $price;
-    public string $name;
-    public string $description;
-
-
+    /**
+     * MenuItem constructor.
+     * @param int $price
+     * @param string $name
+     * @param string $description
+     */
     public function __construct(int $price, string $name, string $description)
     {
         $this->price = $price;
@@ -17,12 +24,21 @@ class MenuItem
         $this->description = $description;
     }
 
-    public function getPrice()
+    /**
+     * Get the price of the item.
+     * @return int
+     */
+    public function getPrice(): int
     {
         return $this->price - $this->getDiscount();
     }
 
-    private function getDiscount(){
+    /**
+     * Get the discount applied to the item.
+     * @return int
+     */
+    protected function getDiscount(): int
+    {
         return 0;
     }
 }
